@@ -72,10 +72,15 @@ post.fd(10)
 post.lt(10)
 post.fd(10)
 post.lt(10)
-post.fd(10)
+post.fd(15)
 post.lt(10)
 
 
 
-post.hideturtle()
+post.rt(90)
+post.fd(100)
+
+
+
+#post.hideturtle()
 turtle.done()
