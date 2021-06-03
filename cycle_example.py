@@ -3,10 +3,15 @@ import  turtle
 post = turtle.Turtle()
 
 
-post.lt(180/2)
+post.lt(90)
 post.up()
+post.fd(200/2)
+post.lt(90)
+post.down()
+post.fd(200/2)
+post.lt(180)
 
-iteration = 5
+iteration = 20
 for j in range(2):
     for i in range(iteration+1):
         post.fd(200)
