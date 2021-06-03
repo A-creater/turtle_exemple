@@ -82,5 +82,5 @@ post.fd(100)
 
 
 
-#post.hideturtle()
+post.hideturtle()
 turtle.done()
