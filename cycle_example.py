@@ -11,7 +11,7 @@ post.down()
 post.fd(200/2)
 post.lt(180)
 
-iteration = 20
+iteration = 10
 for j in range(2):
     for i in range(iteration+1):
         post.fd(200)
