@@ -98,14 +98,23 @@ player.fd(20)
 
 
 player.hideturtle()  # спрятать черепаху
+player.fillcolor('black')  # установить цвет заливки
+player.fillcolor(1, 0.69, 0)  # установить цвет заливки альтернативный вариант r, g, b
+player.begin_fill()  # начать заливку
 # player.left(90)  # Повернуть на лево 90 градусов
+# player.forward(100)  # вперед 100 шагов
 # player.fd(100)  # вперед 100 шагов
 # player.lt(90)  # налево 90 градусов
 # player.up()  # поднять карандаш
 # player.down()  # опустить карандаш
 # player.rt(90)  # направо 90 градусов
-# player.up()
-# player.fd(100)
+player.end_fill()  # закончить заливку
+turtle.done()  # задержать результат
+
+x, y = 100, 100
+player.goto(x, y)  # переместить черепаху в координаты (100, 100)
+player.speed(10)  # ускорение/замедление черепахи
+
 
 
 
