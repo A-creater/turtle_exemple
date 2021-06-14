@@ -1,5 +1,7 @@
 import turtle
 import  math
+
+
 a = 40
 rez = (math.sqrt(2)) * (a / 2)
 
