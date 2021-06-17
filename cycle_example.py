@@ -2,36 +2,36 @@ import  turtle
 
 post = turtle.Turtle()
 
-<<<<<<< HEAD
+# <<<<<<< HEAD
 
-post.lt(90)
-post.up()
-post.fd(200/2)
-post.lt(90)
-post.down()
-post.fd(200/2)
-post.lt(180)
-
-iteration = 20
-for j in range(2):
-    for i in range(iteration+1):
-        post.fd(200)
-        post.lt(180)
-        post.fd(200)
-        post.lt(90)
-        post.up()
-        post.fd(200/iteration)
-        post.lt(90)
-        post.down()
-    post.lt(90)
-=======
+# post.lt(90)
+# post.up()
+# post.fd(200/2)
+# post.lt(90)
+# post.down()
+# post.fd(200/2)
+# post.lt(180)
+#
+# iteration = 20
+# for j in range(2):
+#     for i in range(iteration+1):
+#         post.fd(200)
+#         post.lt(180)
+#         post.fd(200)
+#         post.lt(90)
+#         post.up()
+#         post.fd(200/iteration)
+#         post.lt(90)
+#         post.down()
+#     post.lt(90)
+# # =======
 def paint_figure(x, y):
     """
     нарисуем фигуру в нужном месте
     :return:
     """
     post.speed(0)
->>>>>>> af66fcd294a3bb69925a1df9cfbbbc821e8b608b
+ #  >>>>>>> af66fcd294a3bb69925a1df9cfbbbc821e8b608b
     post.up()
     post.goto(x, y)
     post.down()
