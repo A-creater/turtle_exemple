@@ -3,9 +3,12 @@ import turtle
 play = turtle.Turtle()
 play.speed(0)
 
-def test(color, rad):
+def test(color, rad, x, y):
     b = rad * 0.7
     a = rad - b
+    play.up()
+    play.goto(x, y)
+    play.down()
     if color == 'black':
         play.fillcolor(color)
         play.circle(rad)
@@ -28,11 +31,13 @@ def test(color, rad):
         play.circle(b)
 
 
-
 rad = 30
 black = 'black'
 white = 'white'
-test(black, rad)
+test(black, rad, 0, 0)
+test(white, rad, 60, 0)
+test(black, rad, 120, 0)
+test(white, rad, 180, 0)
 
 
 play.hideturtle()
