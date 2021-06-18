@@ -1,36 +1,36 @@
 import turtle
-import  math
 
 play = turtle.Turtle()
 
-def test(iter, iter1, fd, lt, color):
-    play.fillcolor(color)
-    for i in range(iter):
-        play.fd(fd)
-        play.lt(lt)
+def test(color, rad):
+    b = rad * 0.7
+    a = rad - b
+    if color == 'black':
+        play.fillcolor(color)
+        play.circle(rad)
 
-    play.lt(90)
-    play.up()
-    play.fd(20)
-    play.down()
-    play.rt(90)
-
-    play.begin_fill()
-    for j in range(iter1):
-        play.fd(fd)
-        play.lt(lt1)
-        
-    play.end_fill()
-
-
-iterations = 40
-iterations1 = 27
-fd = 10
-lt = 360/iterations
-lt1 = 360/iterations1
+        play.lt(90)
+        play.up()
+        play.fd(a)
+        play.down()
+        play.rt(90)
+        play.begin_fill()
+        play.circle(b)
+        play.end_fill()
+    else:
+        play.circle(rad)
+        play.lt(90)
+        play.up()
+        play.fd(a)
+        play.down()
+        play.rt(90)
+        play.circle(b)
 
 
-test(iterations, iterations1, fd, lt, 'black')
+rad = 30
+black = 'black'
+white = 'white'
+test(black, rad)
 
 
 turtle.done()
