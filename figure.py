@@ -1,6 +1,7 @@
 import turtle
 
 play = turtle.Turtle()
+play.speed(0)
 
 def test(color, rad):
     b = rad * 0.7
@@ -27,10 +28,12 @@ def test(color, rad):
         play.circle(b)
 
 
+
 rad = 30
 black = 'black'
 white = 'white'
 test(black, rad)
 
 
+play.hideturtle()
 turtle.done()
