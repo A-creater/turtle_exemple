@@ -4,6 +4,7 @@ import  math
 play = turtle.Turtle()
 
 def test(iter, iter1, fd, lt, color):
+    play.fillcolor(color)
     for i in range(iter):
         play.fd(fd)
         play.lt(lt)
@@ -13,12 +14,13 @@ def test(iter, iter1, fd, lt, color):
     play.fd(20)
     play.down()
     play.rt(90)
-    play.fillcolor('black')
+
     play.begin_fill()
     for j in range(iter1):
         play.fd(fd)
         play.lt(lt1)
-        play.end_fill()
+        
+    play.end_fill()
 
 
 iterations = 40
