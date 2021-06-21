@@ -8,7 +8,6 @@ d = 100
 c = 3.14*d
 
 def checker():
-
     for i in range(36):
         play.fd(10)
         play.lt(10)
@@ -20,9 +19,12 @@ def checker():
     play.rt(90)
 
     for j in range(30):
+        play.fillcolor('black')
+        play.begin_fill()
         play.fd(10)
         play.lt(13)
 
+        play.end_fill()
 
 checker()
 
