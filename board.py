@@ -18,26 +18,21 @@ def black_white(color, fd, x, y):  # Рисует
     board.end_fill()
     board.fd(fd/iterations)
 
-    # for j in range(iterations):
-    #     board.fd(fd/iterations)
-    #     board.lt(360/iterations)
-    # board.fd(fd / iterations)
-    #
+
 x = -50
 y = 0
 for i in range(8):
-
     for j in range(8):
-        black_white('white', 200, x, y)
-        x = j * 50
+        if (i + j) % 2 == 0:
+            black_white('white', 200, x, y)
+            x = j * 50
+        else:
+            black_white('black', 200, x, y)
+            x = j * 50
     y = y - 50
     x = -50
-    # board.lt(180)
-    # board.fd(400)
-    # board.lt(90)
-    # board.fd(50)
-    # board.lt(90)
-        # black_white('black', 200, 0, 0)
+
+
 
 
 def test(color, rad, x, y):
@@ -56,6 +51,10 @@ def test(color, rad, x, y):
     board.begin_fill()
     board.circle(b)
     board.end_fill()
+
+
+
+
 
 
 # test('black', 25, 0, 0)
