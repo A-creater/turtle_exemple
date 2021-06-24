@@ -16,4 +16,6 @@ u = [i*i for i in range(n)]
 y = [i*i+10 for i in range(n)]
 r = [i**i for i in range(n)]  # Заполнить степенью i
 s = [sqrt(i) for i in range(n)]  # Корень числа
-w = [i for i in range(n) if i % 2 == 0]  #  Генератор с условиями
+w = [i for i in range(n) if i % 2 == 0]  # Генератор с условиями
+
+
