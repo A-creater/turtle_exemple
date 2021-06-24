@@ -3,7 +3,7 @@ import turtle
 
 
 board = turtle.Turtle()
-# fd = 200
+board.speed(0)
 
 def black_white(color, fd, x, y):  # Рисует
     board.up()
@@ -16,23 +16,7 @@ def black_white(color, fd, x, y):  # Рисует
         board.fd(fd/iterations)
         board.lt(360/iterations)
     board.end_fill()
-    board.fd(fd/iterations)
-
-
-x = -50
-y = 0
-for i in range(8):
-    for j in range(8):
-        if (i + j) % 2 == 0:
-            black_white('white', 200, x, y)
-            x = j * 50
-        else:
-            black_white('black', 200, x, y)
-            x = j * 50
-    y = y - 50
-    x = -50
-
-
+    # board.fd(fd/iterations)
 
 
 def test(color, rad, x, y):
@@ -42,7 +26,9 @@ def test(color, rad, x, y):
     board.goto(x, y)
     board.down()
     board.fillcolor(color)
+    board.begin_fill()
     board.circle(rad)
+    board.end_fill()
     board.lt(90)
     board.up()
     board.fd(a)
@@ -53,32 +39,20 @@ def test(color, rad, x, y):
     board.end_fill()
 
 
-
-
-
-
-# test('black', 25, 0, 0)
-# test('white', 25, 0, 0)
-# c = -100
-# f = -50
-#
-# for b in range(4):
-#     black_white(200, c, 0)
-#     c = c + 100
-    # for d in range(8):
-    #     black_white(200, c, -50)
-    #     # f = f + 50
-# e = -75
-# for g in range(8):
-#     rad = 25
-#     black = 'black'
-#     white = 'white'
-#     test(black, rad, e, 0)
-#     e = e + 50
-
-
-
-
+x = -150
+y = 150
+for i in range(8):
+    for j in range(8):
+        if (i + j) % 2 == 0:
+            black_white('white', 200, x, y)
+            # test('#A5A1A1', 25, x + 25, y)
+            x = j * 50
+        else:
+            black_white('black', 200, x, y)
+            test('white', 25, x + 25, y)
+            x = j * 50
+    y = y - 50
+    x = -150
 
 
 turtle.done()
