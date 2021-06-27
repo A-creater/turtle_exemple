@@ -5,7 +5,7 @@ a = [0] * n
 value = 23
 a[1] = value
 a[3] = 12.5
-a = [[1,2,3,4], [5,6], [7,8,9]]
+a = [[1, 2, 3, 4], [5, 6], [7, 8, 9]]
 for i in range(len(a)):
     for j in range(len(a[i])):
         print(a[i][j], end=' ')

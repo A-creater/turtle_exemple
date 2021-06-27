@@ -39,25 +39,25 @@ def test(color, rad, x, y):
     board.end_fill()
 
 
-def output():
-    x = -50
-    y = 0
+def output(x, y):
+    # x = -200
+    # y = 200
     for i in range(8):
         for j in range(8):
             if (i + j) % 2 == 0:
                 black_white('white', 200, x, y)
-                test('black', 25, x + 25, y)
+                # test('black', 25, x + 25, y)
                 x = j * 50
 
             else:
                 black_white('black', 200, x, y)
-                test('white', 25, x + 25, y)
+                # test('white', 25, x + 25, y)
                 x = j * 50
         y = y - 50
         x = -50
 
 
-output()
+# output(-50, 0)
 
 
 turtle.done()
