@@ -57,48 +57,50 @@ def board_a(x, y):
 
 
 def figure_position(rad, x, y):
-    n = 8
-    start = x
-    x_add_y(x, y)
-    a = [[0] * n for item in range(n)]
-    for i in range(len(a)):
 
-        for j in range(len(a[i])):
+    c = list_initialization()
+    start = x
+
+    for i in range(len(c)):
+        for j in range(len(c[i])):
             condition = i < 3
             black_condition = i >= 5
-            if condition and (i+j) % 2 != 0:
-                test('white', rad, x, y)
-                a[i][j] = 'white'
-                b = a[i][j]
-                x += 50
-                # test('white', rad, x, y)
+            if (i+j) % 2 == 0:
                 x += 50
                 j *= 50
-
-            elif black_condition and (i+j) % 2 != 0:
-                x += 50
-                test('black', rad, x, y)
-                a[i][j] = 'black'
+            else:
+                if condition:
+                    test('white', rad, x, y)
+                if black_condition:
+                    test('black', rad, x, y)
                 x += 50
                 j *= 50
         y = y - 50
         x = start
-    pprint.pprint(a)
+    pprint.pprint(c)
 
-def x_add_y(x, y):
-    return x+y
-# n = 8
-# a = [[0] * n for i in range(n)]
-#
-# for i in range(len(a)):
-#     for j in range(len(a[i])):
-#         test('white', 25, (-50 + 25), 0)
-#
-# # pprint.pprint(a)
+
+
+def list_initialization():
+    n = 8
+    a = [[0] * n for item in range(n)]
+    for i in range(len(a)):
+        for j in range(len(a[i])):
+            condition = i < 3
+            black_condition = i >= 5
+            if condition and (i + j) % 2 != 0:
+                a[i][j] = 1
+
+            if black_condition and (i + j) % 2 != 0:
+                a[i][j] = 2
+    return a
+    # pprint.pprint(a)
 
 board_a(-200, 200)
 figure_position(20, (-200 + 25), (200 + 5))
-# figure_position(20, x_add_y((-200 + 25), (200 + 5)), x_add_y((-200 + 25), (200 + 5)))
+
+
+
 
 
 turtle.done()
