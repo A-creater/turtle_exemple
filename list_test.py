@@ -84,17 +84,14 @@ def figure_position(rad, x, y):
 
     for i in range(len(c)):
         for j in range(len(c[i])):
-
             if (i+j) % 2 == 0:
                 x += 50
-                j *= 50
             else:
                 if c[i][j] == 1:
                     test('white', rad, x, y)
                 if c[i][j] == 2:
                     test('black', rad, x, y)
                 x += 50
-                j *= 50
         y = y - 50
         x = start
     pprint.pprint(c)
