@@ -119,7 +119,7 @@ figure_position(20, (-200 + 25), (200 + 5))
 
 
 
-
+board.hideturtle()
 turtle.done()
 
 
