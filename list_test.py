@@ -36,7 +36,7 @@ def test(color, rad, x, y):
     board.begin_fill()
     board.circle(b)
     board.end_fill()
-    return x + y
+    # return x + y
 
 def board_a(x, y):
     start = x
@@ -57,27 +57,6 @@ def board_a(x, y):
 
 
 def figure_position(rad, x, y):
-
-    # c = list_initialization()
-    # start = x
-    #
-    # for i in range(len(c)):
-    #     for j in range(len(c[i])):
-    #         condition = i < 3
-    #         black_condition = i >= 5
-    #         if (i+j) % 2 == 0:
-    #             x += 50
-    #             j *= 50
-    #         else:
-    #             if condition:
-    #                 test('white', rad, x, y)
-    #             if black_condition:
-    #                 test('black', rad, x, y)
-    #             x += 50
-    #             j *= 50
-    #     y = y - 50
-    #     x = start
-    # pprint.pprint(c)
 
     c = list_initialization()
     start = x
