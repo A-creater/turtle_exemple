@@ -2,39 +2,39 @@
 import turtle
 from board import board_a
 
-board.speed(0)
-
-def black_white(color, fd, x, y):  # Рисует
-    board.up()
-    board.goto(x, y)
-    board.down()
-    iterations = 4
-    board.fillcolor(color)
-    board.begin_fill()
-    for i in range(iterations):
-        board.fd(fd/iterations)
-        board.lt(360/iterations)
-    board.end_fill()
-    board.fd(fd/iterations)
 
 
-
-def board_a():
-    x = -200
-    y = 200
-    start = x
-    for i in range(8):
-        for j in range(8):
-            if (i + j) % 2 == 0:
-                black_white('white', 200, x, y)
-                x += 50
-                j *= 50
-            else:
-                black_white('black', 200, x, y)
-                x += 50
-                j *= 50
-        y = y - 50
-        x = start
+# def black_white(color, fd, x, y):  # Рисует
+#     ch.up()
+#     ch.goto(x, y)
+#     ch.down()
+#     iterations = 4
+#     ch.fillcolor(color)
+#     ch.begin_fill()
+#     for i in range(iterations):
+#         ch.fd(fd/iterations)
+#         ch.lt(360/iterations)
+#     ch.end_fill()
+#     ch.fd(fd/iterations)
+#
+#
+#
+# def board_a():
+#     x = -200
+#     y = 200
+#     start = x
+#     for i in range(8):
+#         for j in range(8):
+#             if (i + j) % 2 == 0:
+#                 black_white('white', 200, x, y)
+#                 x += 50
+#                 j *= 50
+#             else:
+#                 black_white('black', 200, x, y)
+#                 x += 50
+#                 j *= 50
+#         y = y - 50
+#         x = start
 
 #
 # class Car(turtle.Turtle):
@@ -92,14 +92,16 @@ class Checker(turtle.Turtle):
     # def draw(self):
 
 
-    def draw(self, color, x, y):
-        ch.board_a()
+    # def draw(self, color, x, y):
+    def draw(self):
+        board_a()
 
 
 ch = Checker()
-
-ch.create(ch.white, ch.x, ch.y)
+ch.speed(0)
 ch.draw()
+ch.create(ch.white, ch.x, ch.y)
+
         # board_a(-200, 200)
         # ch.draw(color, x, y)
         # board[i, j] = ch
