@@ -2,40 +2,6 @@
 import turtle
 from board import board_a
 
-
-
-# def black_white(color, fd, x, y):  # Рисует
-#     ch.up()
-#     ch.goto(x, y)
-#     ch.down()
-#     iterations = 4
-#     ch.fillcolor(color)
-#     ch.begin_fill()
-#     for i in range(iterations):
-#         ch.fd(fd/iterations)
-#         ch.lt(360/iterations)
-#     ch.end_fill()
-#     ch.fd(fd/iterations)
-#
-#
-#
-# def board_a():
-#     x = -200
-#     y = 200
-#     start = x
-#     for i in range(8):
-#         for j in range(8):
-#             if (i + j) % 2 == 0:
-#                 black_white('white', 200, x, y)
-#                 x += 50
-#                 j *= 50
-#             else:
-#                 black_white('black', 200, x, y)
-#                 x += 50
-#                 j *= 50
-#         y = y - 50
-#         x = start
-
 #
 # class Car(turtle.Turtle):
 #     mileage = 0
@@ -89,18 +55,38 @@ class Checker(turtle.Turtle):
         ch.begin_fill()
         ch.circle(b)
         ch.end_fill()
-    # def draw(self):
 
 
-    # def draw(self, color, x, y):
-    def draw(self):
+
+
+
+    def draw(self, x, y):
+        ch.x = x
+        ch.y = y
+        start = ch.x
         board_a()
-
+        for i in range(8):
+            for j in range(8):
+                condition = i < 3
+                black_condition = i >= 5
+                if (i + j) % 2 == 0:
+                    ch.x += 50
+                else:
+                    if condition and (i + j) % 2 != 0:
+                        ch.create(ch.white, ch.x, ch.y)
+                        ch.up()
+                        ch.x += 50
+                    if black_condition and (i + j) % 2 != 0:
+                        ch.create(ch.black, ch.x, ch.y)
+                        ch.up()
+                        ch.x += 50
+            ch.y -= 50
+            ch.x = start
 
 ch = Checker()
 ch.speed(0)
-ch.draw()
-ch.create(ch.white, ch.x, ch.y)
+ch.draw((-200 + 25), (200 + 5))
+
 
         # board_a(-200, 200)
         # ch.draw(color, x, y)

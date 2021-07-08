@@ -5,7 +5,7 @@ import turtle
 board = turtle.Turtle()
 
 board.speed(0)
-
+# if __name__ == '__main__':
 def black_white(color, fd, x, y):  # Рисует
     board.up()
     board.goto(x, y)
@@ -38,6 +38,6 @@ def board_a():
         y = y - 50
         x = start
 
-board_a()
-turtle.done()
+
+
 
