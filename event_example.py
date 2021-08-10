@@ -1,4 +1,7 @@
 import turtle
+import datetime
+
+
 hour = turtle.Turtle()
 minutes = turtle.Turtle()
 seconds = turtle.Turtle()
@@ -73,14 +76,15 @@ def run_forward():
 
 
 
-ho = turtle.numinput('', 'Введи часы')
-min = turtle.numinput('', 'Введи минуты')
+# ho = turtle.numinput('', 'Введи часы')
+# min = turtle.numinput('', 'Введи минуты')
+t = datetime.datetime.now()
 seconds.lt(90)
 minutes.lt(90)
-minutes.rt(360 / 60 * min)
+minutes.rt(360 / 60 * t.minute)
 hour.lt(90)
-hour.rt(360 / 12 * ho)
-hour.rt((360 / 12) / 60 * min)
+hour.rt(360 / 12 * t.hour)
+hour.rt((360 / 12) / 60 * t.hour)
 
 
 
