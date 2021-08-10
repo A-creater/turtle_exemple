@@ -17,10 +17,7 @@ y = [i*i+10 for i in range(n)]
 r = [i**i for i in range(n)]  # Заполнить степенью i
 s = [sqrt(i) for i in range(n)]  # Корень числа
 w = [i for i in range(n) if i % 2 == 0]  # Генератор с условиями
-<<<<<<< HEAD
 
-
-=======
 c[0] = 1  # Заменить нулевой элемент списка числом 1
 del c[4]  # Удалить 4-й элемент списка
 t = c + b  # Объединение списков
@@ -49,4 +46,4 @@ for item in a:
     else:
         paint_empty()
     print(item)
->>>>>>> 5bfcb6370dd971d63adcde330fb38c64797254c2
+
